@@ -8,19 +8,19 @@ var data = [
         {
          name: "Cloud's rest",
          image : "https://images.pexels.com/photos/803226/pexels-photo-803226.jpeg",
-         description:"blah blah blah"
+         description:"Great scenary in the middle American continent"
         }
         ,
         {
          name: "Mount Everst",
          image : "https://images.pexels.com/photos/259804/pexels-photo-259804.jpeg",
-         description:"blah blah blah"
+         description:"Great scenary in Colorado River"
         }
         ,
         {
          name: "Tree walk",
          image : "https://images.pexels.com/photos/388303/pexels-photo-388303.jpeg",
-         description:"blah blah blah"
+         description:"Great rainforest in Georgia and South Carolina"
         }
         
     ]
