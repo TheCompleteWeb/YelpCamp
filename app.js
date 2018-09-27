@@ -102,7 +102,7 @@ app.post("/campgrounds/:id/comments", function(req, res){
     Campground.findById(req.params.id, function(err, campground){
         if(err){
             console.log(err);
-            redirect("/campgrounds");
+            res.redirect("/campgrounds");
         } else {
             
             Comment.create(req.body.comment, function(err, comment){
@@ -133,6 +133,19 @@ app.post('/register', function(req, res){
             res.redirect("/campgrounds");
         });
     });
+});
+
+app.get("/login", function(req, res){
+    res.render("login");
+});
+
+app.post("/login", passport.authenticate("local", 
+{
+    successRedirect:"/campgrounds", 
+    failureRedirect:"/login"
+    
+}), function(req, res){
+    
 });
 
 app.listen(process.env.PORT, process.env.IP, function(){
