@@ -15,7 +15,7 @@ var commentRoutes = require('./routes/comments'),
     campgroundRoutes = require('./routes/campgrounds'),
     indexRoutes = require('./routes/index');
     
-seedDB();
+// seedDB();
 
 app.use(require("express-session")({
         secret : "Once again Rusty wins cutest dog!",
