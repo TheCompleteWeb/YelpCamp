@@ -8,6 +8,7 @@ var express = require('express'),
     User = require("./models/user"),
     Campground = require("./models/campground"),
     Comment = require("./models/comment"),
+    flash = require('connect-flash'),
     // User = require("./models/user")
     
     seedDB = require("./seeds");
@@ -44,6 +45,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride('_method'));
+app.use(flash());
 console.log(__dirname);
 
 app.use("/", indexRoutes);
