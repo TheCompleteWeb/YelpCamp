@@ -19,12 +19,13 @@ router.get('/', function(req, res){
 router.post('/', middleware.isLoggedIn, function(req, res){
    var name = req.body.name;
    var image = req.body.image;
+   var price = req.body.price;
    var desc = req.body.description;
    var author = {
        id: req.user._id,
        username : req.user.username
    }
-   var newCampgound = {name:name, image:image, description: desc, author: author};
+   var newCampgound = {name:name, price:price, image:image, description: desc, author: author};
    console.log(req.user);
    
   /* campgrounds.push(newCampgound);*/
